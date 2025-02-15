@@ -1,0 +1,39 @@
+{
+  "extends": [
+    "./tsconfig.paths.json"
+  ],
+  "compilerOptions": {
+    // Настройки JavaScript
+    "target": "es2020",
+    "module": "esnext",
+    "moduleResolution": "node",
+
+    // Build settings.
+    "importHelpers": true,
+    "removeComments": false,
+
+    // Настройки путей
+    "baseUrl": ".",
+
+    // Строгие проверки
+    "strict": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictPropertyInitialization": true,
+    "allowUnreachableCode": false,
+
+    // Дополнительные настройки
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true
+  },
+}
