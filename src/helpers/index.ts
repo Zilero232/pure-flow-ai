@@ -1,0 +1,1 @@
+export { createWordRegex } from './createWordRegex';

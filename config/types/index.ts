@@ -1,37 +1,32 @@
-import type { PackageJson as PackageJsonType } from 'type-fest';
-import type { RollupOptions, OutputOptions, Plugin } from 'rollup';
-
-export type PackageJson = PackageJsonType;
-
-// Типы для режимов сборки
+/**
+ * Build mode enumeration.
+ */
 export enum BUILD_MODES_ENUM {
+  /** Development mode. */
   DEVELOPMENT = 'development',
+
+  /** Production mode. */
   PRODUCTION = 'production'
 }
 
+/**
+ * Build format enumeration.
+ */
 export enum BUILD_FORMATS_ENUM {
+  /** CommonJS format. */
   CJS = 'cjs',
+
+  /** ES Modules format. */
   ESM = 'esm',
-  All = 'all'
 }
 
-// Типы для опций сборки
+/**
+ * Build configuration options interface.
+ */
 export interface BuildOptions {
-  format: BUILD_FORMATS_ENUM;
+  /** Build environment mode */
   env: BUILD_MODES_ENUM;
-}
 
-// Типы для конфигурации сборки
-export interface BuildConfig extends RollupOptions {
-  output: OutputOptions;
-  plugins: Plugin[];
+  /** Output format */
+  format: BUILD_FORMATS_ENUM;
 }
-
-// Типы для аргументов командной строки
-export interface CommandLineArgs {
-  environment?: BUILD_MODES_ENUM;
-  format?: BUILD_FORMATS_ENUM;
-  watch?: boolean;
-  config?: string;
-}
-

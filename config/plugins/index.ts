@@ -4,7 +4,6 @@ import type { BuildOptions } from '../types';
 import { createTypeScriptPlugin } from './core/createTypeScriptPlugin';
 import { createResolvePlugins } from './core/createResolvePlugins';
 import { createOptimizationPlugins } from './core/createOptimizationPlugins';
-import { createAssetsPlugins } from './core/createAssetsPlugins';
 
 import { createDevPlugins } from './modes/development';
 import { createProdPlugins } from './modes/production';
@@ -24,9 +23,6 @@ export const createPlugins = (options: BuildOptions): Plugin[] => {
 
      // Build optimization
      ...createOptimizationPlugins(),
-
-     // Asset handling
-     ...createAssetsPlugins(),
   ];
 
   // Environment plugins.

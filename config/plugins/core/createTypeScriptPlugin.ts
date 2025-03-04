@@ -2,7 +2,7 @@ import typescript from '@rollup/plugin-typescript';
 import { typescriptPaths } from 'rollup-plugin-typescript-paths';
 
 import type { Plugin } from 'rollup';
-import type { BuildOptions } from '../../types';
+import { BUILD_MODES_ENUM, type BuildOptions } from '../../types';
 
 import { paths } from '../../core/paths';
 
@@ -16,7 +16,7 @@ import { paths } from '../../core/paths';
 export const createTypeScriptPlugin = (options: BuildOptions): Plugin[] => {
   const { env, format } = options;
 
-  const isDev = env === 'development';
+  const isDev = env === BUILD_MODES_ENUM.DEVELOPMENT;
 
   return [
     // Handle TypeScript path aliases
@@ -30,16 +30,10 @@ export const createTypeScriptPlugin = (options: BuildOptions): Plugin[] => {
       // Base configuration
       tsconfig: paths.config.tsconfig,
 
-      // Output configuration
-      declaration: true,
-      declarationDir: `${paths.build}/${format}/types`,
       outDir: `${paths.build}/${format}`,
 
       // Compiler options override.
       compilerOptions: {
-        sourceMap: isDev,
-        declarationMap: true,
-
         // Development specific options.
         ...(isDev && {
           removeComments: false,
@@ -60,6 +54,12 @@ export const createTypeScriptPlugin = (options: BuildOptions): Plugin[] => {
       // Build process options.
       noEmitOnError: !isDev,
 
-    })
+      exclude: [
+        '**/__tests__/**',
+        '**/*.test.ts',
+        '**/*.spec.ts',
+        'node_modules/**',
+      ],
+    }),
   ];
 };

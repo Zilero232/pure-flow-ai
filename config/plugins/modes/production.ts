@@ -1,11 +1,8 @@
 import terser from '@rollup/plugin-terser';
 import strip from '@rollup/plugin-strip';
-import license from 'rollup-plugin-license';
 import filesize from 'rollup-plugin-filesize';
 
 import type { Plugin } from 'rollup';
-
-import { paths } from '../../core/paths'
 
 export const createProdPlugins = (): Plugin[] => {
   return [
@@ -59,19 +56,6 @@ export const createProdPlugins = (): Plugin[] => {
       // Keep function and class names
       keep_classnames: true,
       keep_fnames: true,
-    },
-  }),
-
-  // Add license banner.
-  license({
-    banner: {
-      // Style of comment
-      commentStyle: 'regular',
-      // Content
-      content: {
-        file: paths.config.license,
-        encoding: 'utf-8',
-      },
     },
   }),
 
