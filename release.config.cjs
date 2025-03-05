@@ -1,6 +1,6 @@
 const config = {
 	// Specifies that the release will occur on the 'main' branch
-	branches: ['main'],
+	branches: ['master'],
 
 	// The repository URL for the project
 	repositoryUrl: 'git+https://github.com/Zilero232/pure-flow-ai',
