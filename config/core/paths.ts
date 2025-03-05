@@ -27,6 +27,3 @@ export const paths = {
   stats: path.resolve(ROOT_DIR, 'stats'),
   coverage: path.resolve(ROOT_DIR, 'coverage'),
 } as const;
-
-// Types for paths
-export type PathsConfig = typeof paths;
