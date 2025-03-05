@@ -51,26 +51,14 @@ jobs:
 
       # Step to build the project (production build).
       - name: Run Build
-        run: yarn build:prod
-
-      # Step to copy the schema file to a temporary folder.
-      - name: Copy file to temp folder
-        run: |
-          mkdir temp-folder
-          cp public/commit-jazzer-schema.json temp-folder/
-
-      #  Step to deploy to GitHub Pages.ы
-      - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v4
-        with:
-          branch: gh-pages
-          folder: temp-folder
-          token: ${{ secrets.GITHUB_TOKEN }}
+        run: yarn build
 
       # Step to run Semantic Release.
       - name: Semantic Release
         uses: cycjimmy/semantic-release-action@v4.1.1
 
         env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }} # Passes GitHub token for authentication with GitHub API.
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }} # Passes NPM token for publishing to NPM.
+          # Passes GitHub token for authentication with GitHub API.
+          GITHUB_TOKEN: ${{ secrets.PURE_FLOW_AI_GITHUB_TOKEN }}
+          # Passes NPM token for publishing to NPM.
+          NPM_TOKEN: ${{ secrets.PURE_FLOW_AI_NPM_TOKEN }}

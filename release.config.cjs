@@ -3,7 +3,7 @@ const config = {
 	branches: ['main'],
 
 	// The repository URL for the project
-	repositoryUrl: 'git+https://github.com/Zilero232/commit-jazzer',
+	repositoryUrl: 'git+https://github.com/Zilero232/pure-flow-ai',
 
 	plugins: [
 		[

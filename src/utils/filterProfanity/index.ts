@@ -15,7 +15,11 @@ interface FilterProfanityProps {
  * @returns {string} - The processed string with profane words filtered.
  */
 export const filterProfanity = ({ input, blocklist }: FilterProfanityProps): string => {
-	if (!input || !blocklist) {
+	if (!input) {
+		return '';
+	}
+
+	if (!blocklist) {
 		return input;
 	}
 

@@ -17,15 +17,19 @@ interface MaskProfaneWordProps extends Pick<BadWordFilterOptions, 'placeholder'>
  *
  * @returns {string} - The processed string with blocklist words masked.
  */
-export const maskProfaneWord = ({ input, blocklist, placeholder }: MaskProfaneWordProps): string => {
-	if (!input || !blocklist || !placeholder) {
+export const maskProfaneWord = ({ input, blocklist, placeholder = '*' }: MaskProfaneWordProps): string => {
+  if (!input) {
+    return '';
+  }
+
+	if (!blocklist) {
 		return input;
 	}
 
 	blocklist.forEach((badWord: string) => {
 		const regex = createWordRegex(badWord);
 
-		input = input.replace(regex, placeholder.repeat(badWord.length));
+		input = input.replace(regex, match => placeholder.repeat(match.length));
 	});
 
 	return input;

@@ -7,5 +7,9 @@
  * ignoring case, and using word boundaries so that only complete words are matched.
  */
 export const createWordRegex = (word: string): RegExp => {
+  if (!word) {
+    return new RegExp('');
+  }
+
 	return new RegExp(`\\b${word.replace(/(\W)/g, '\\$1')}\\b`, 'gi');
 };

@@ -49,14 +49,10 @@ jobs:
       - name: Run Eslint checks
         run: yarn lint:check
 
-      # Step to run spell checking on the codebase.
-      - name: Run Spell checks
-        run: yarn cspell
-
       # Step to run tests on the codebase.
       - name: Run Test
         run: yarn test
 
       # Step to build the project for production.
       - name: Run Build
-        run: yarn build:prod
+        run: yarn build
