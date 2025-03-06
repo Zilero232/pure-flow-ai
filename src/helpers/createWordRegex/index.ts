@@ -8,7 +8,7 @@
  */
 export const createWordRegex = (word: string): RegExp => {
   if (!word) {
-    return new RegExp('');
+    return /^$/;
   }
 
 	return new RegExp(`\\b${word.replace(/(\W)/g, '\\$1')}\\b`, 'gi');

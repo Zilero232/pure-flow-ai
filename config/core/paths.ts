@@ -1,4 +1,5 @@
 import path from 'node:path';
+import process from 'node:process';
 
 // Get root directory.
 const ROOT_DIR = path.resolve(process.cwd());

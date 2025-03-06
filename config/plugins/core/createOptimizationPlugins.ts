@@ -1,6 +1,6 @@
-import autoExternal from 'rollup-plugin-auto-external';
-
 import type { Plugin } from 'rollup';
+
+import autoExternal from 'rollup-plugin-auto-external';
 
 import { paths } from '../../core/paths';
 

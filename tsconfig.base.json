@@ -5,35 +5,35 @@
   "compilerOptions": {
     // Настройки JavaScript
     "target": "es2020",
+
+    // Настройки путей
+    "baseUrl": ".",
     "module": "esnext",
     "moduleResolution": "node",
 
+
+    "resolveJsonModule": true,
+    // Строгие проверки
+    "strict": true,
+    "strictFunctionTypes": true,
+    "strictNullChecks": true,
+    "strictPropertyInitialization": true,
+    "allowUnreachableCode": false,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
     // Build settings.
     "importHelpers": true,
     "removeComments": false,
 
-    // Настройки путей
-    "baseUrl": ".",
-
-    // Строгие проверки
-    "strict": true,
-    "noImplicitAny": true,
-    "noImplicitThis": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noImplicitReturns": true,
-    "noFallthroughCasesInSwitch": true,
-    "strictNullChecks": true,
-    "strictFunctionTypes": true,
-    "strictPropertyInitialization": true,
-    "allowUnreachableCode": false,
-
+    "allowSyntheticDefaultImports": true,
     // Дополнительные настройки
     "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "resolveJsonModule": true,
-    "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "isolatedModules": true
+    "isolatedModules": true,
+    "skipLibCheck": true
   },
 }

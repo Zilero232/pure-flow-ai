@@ -1,14 +1,13 @@
 import type { Plugin } from 'rollup';
+
 import type { BuildOptions } from '../types';
 
-import { createTypeScriptPlugin } from './core/createTypeScriptPlugin';
-import { createResolvePlugins } from './core/createResolvePlugins';
+import { BUILD_MODES_ENUM } from '../types';
 import { createOptimizationPlugins } from './core/createOptimizationPlugins';
-
+import { createResolvePlugins } from './core/createResolvePlugins';
+import { createTypeScriptPlugin } from './core/createTypeScriptPlugin';
 import { createDevPlugins } from './modes/development';
 import { createProdPlugins } from './modes/production';
-
-import { BUILD_MODES_ENUM } from '../types';
 
 export const createPlugins = (options: BuildOptions): Plugin[] => {
   const { env } = options;

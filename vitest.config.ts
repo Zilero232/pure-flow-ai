@@ -1,6 +1,6 @@
 import { vitest } from '@zilero/vitest';
-import { defineConfig, mergeConfig } from 'vitest/config';
 import tsconfigPaths from 'vite-tsconfig-paths';
+import { defineConfig, mergeConfig } from 'vitest/config';
 
 export default mergeConfig(
   vitest,

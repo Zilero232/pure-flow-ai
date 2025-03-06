@@ -1,8 +1,8 @@
-import terser from '@rollup/plugin-terser';
-import strip from '@rollup/plugin-strip';
-import filesize from 'rollup-plugin-filesize';
-
 import type { Plugin } from 'rollup';
+
+import strip from '@rollup/plugin-strip';
+import terser from '@rollup/plugin-terser';
+import filesize from 'rollup-plugin-filesize';
 
 export const createProdPlugins = (): Plugin[] => {
   return [

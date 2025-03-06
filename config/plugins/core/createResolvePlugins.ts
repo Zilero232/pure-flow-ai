@@ -1,8 +1,11 @@
-import { nodeResolve } from '@rollup/plugin-node-resolve';
-import commonjs from '@rollup/plugin-commonjs';
-
 import type { Plugin } from 'rollup';
-import { BUILD_FORMATS_ENUM, type BuildOptions } from '../../types';
+
+import commonjs from '@rollup/plugin-commonjs';
+import { nodeResolve } from '@rollup/plugin-node-resolve';
+
+import type {BuildOptions} from '../../types';
+
+import { BUILD_FORMATS_ENUM  } from '../../types';
 
 /**
  * Creates an array of resolve plugins for Rollup configuration.

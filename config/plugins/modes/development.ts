@@ -1,9 +1,10 @@
-import { visualizer } from 'rollup-plugin-visualizer';
+import type { Plugin } from 'rollup';
+
 import analyze from 'rollup-plugin-analyzer';
 import filesize from 'rollup-plugin-filesize';
 import progress from 'rollup-plugin-progress';
+import { visualizer } from 'rollup-plugin-visualizer';
 
-import type { Plugin } from 'rollup';
 import type { BuildOptions } from '../../types';
 
 import { paths } from '../../core/paths';
@@ -41,7 +42,7 @@ export const createDevPlugins = (options: BuildOptions): Plugin[] => {
       stdout: true,
       onAnalysis: (analysis) => {
         // Log additional analysis info if in development.
-        console.log('Bundle analysis:', analysis);
+        console.warn('Bundle analysis:', analysis);
       }
     }),
 

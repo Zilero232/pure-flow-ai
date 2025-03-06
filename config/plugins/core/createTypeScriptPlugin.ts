@@ -1,10 +1,12 @@
+import type { Plugin } from 'rollup';
+
 import typescript from '@rollup/plugin-typescript';
 import { typescriptPaths } from 'rollup-plugin-typescript-paths';
 
-import type { Plugin } from 'rollup';
-import { BUILD_MODES_ENUM, type BuildOptions } from '../../types';
+import type {BuildOptions} from '../../types';
 
 import { paths } from '../../core/paths';
+import { BUILD_MODES_ENUM  } from '../../types';
 
 /**
  * Creates TypeScript plugins configuration for Rollup.

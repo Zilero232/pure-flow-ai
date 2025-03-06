@@ -1,9 +1,10 @@
 import type { RollupOptions } from 'rollup';
 
-import { BUILD_FORMATS_ENUM, BUILD_MODES_ENUM, BuildOptions } from './types';
+import type { BuildOptions } from './types';
 
-import { createPlugins } from './plugins';
 import { paths } from './core/paths';
+import { createPlugins } from './plugins';
+import { BUILD_FORMATS_ENUM, BUILD_MODES_ENUM } from './types';
 
 /**
  * Creates Rollup configuration based on provided build options.

@@ -15,16 +15,16 @@ export interface BadWordFilterOptions {
 	excludedWords?: string[];
 
 	/**
-	 * A character or string that replaces bad words.
-	 *
-	 * @default "*"
-	 */
-	placeholder?: string;
-
-	/**
 	 * Redefine the list of bad words.
 	 *
 	 * @default false
 	 */
 	overrideBlockWords?: boolean;
+
+	/**
+	 * A character or string that replaces bad words.
+	 *
+	 * @default "*"
+	 */
+	placeholder?: string;
 }

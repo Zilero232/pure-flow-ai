@@ -68,7 +68,7 @@ import BadWordFilter from 'pure-flow-ai';
 
 // Initialize with default options.
 const { hasProfaneWords, maskProfanity, cleanString } = BadWordFilter({
-  additionalBlockWords: ['bad', 'word,']
+  additionalBlockWords: ['bad', 'word,'],
   excludedWords: ['trash'],
   placeholder: '*',
   overrideBlockWords: true
@@ -76,15 +76,12 @@ const { hasProfaneWords, maskProfanity, cleanString } = BadWordFilter({
 
 // Check if text contains profanity.
 const hasBadWords = hasProfaneWords('your text here');
-console.log(hasBadWords); // returns array of found bad words.
 
 // Mask profane words with asterisks
 const masked = maskProfanity('your text here');
-console.log(masked); // returns text with bad words masked.
 
 // Clean text by removing profane words.
 const clean = cleanString('your text here');
-console.log(clean); // returns clean text.
 ```
 
 ## 🤝 Contributing

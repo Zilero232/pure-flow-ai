@@ -1,8 +1,7 @@
 import type { BadWordFilterOptions } from '@src/types';
 
-import { containsProfaneWords, filterProfanity, maskProfaneWord } from '@src/utils';
-
 import { BAD_WORDS_LIST } from '@src/constants';
+import { containsProfaneWords, filterProfanity, maskProfaneWord } from '@src/utils';
 
 /**
  * Plugin for filtering profane words in strings.
