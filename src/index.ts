@@ -1,25 +1,9 @@
-import type { BadWordFilterOptions } from '@src/types';
+import type { BadWordFilterOptions } from '@src/types/modules/BadWordFilterOptions';
 
 import { BAD_WORDS_LIST } from '@src/constants';
 import { containsProfaneWords, filterProfanity, maskProfaneWord } from '@src/utils';
 
-/**
- * Plugin for filtering profane words in strings.
- *
- * @param {BadWordFilterOptions} [options] - Options for the plugin.
- * @param {string[]} [options.blocklist] - List of words to be filtered.
- * @param {string[]} [options.excludedWords] - List of words to be allowed.
- * @param {string} [options.placeholder] - Placeholder string used for masking profane words.
- * @param {boolean} [options.overrideBlocklist] - Flag to override the base list of words.
- *
- * @returns {object} - Object with methods for filtering profane words.
- */
-const BadWordFilter = ({
-  additionalBlockWords = [],
-  excludedWords = [],
-  placeholder = '*',
-  overrideBlockWords = false
-}: BadWordFilterOptions) => {
+const BadWordFilter = ({ additionalBlockWords = [], excludedWords = [],  overrideBlockWords = false }: BadWordFilterOptions) => {
   // Normalize and deduplicate words.
   const normalizeWords = (words: string[]): string[] => {
     return [ ...new Set( words.map( word => word.toLowerCase().trim() ).filter( word => word.length > 0 ) ) ];
@@ -38,7 +22,7 @@ const BadWordFilter = ({
     hasProfaneWords: (input: string): Array<string> => containsProfaneWords({ input, blocklist: listBadWords }),
 
     // Method for masking profane words.
-    maskProfanity: (input: string): string => maskProfaneWord({ input, placeholder, blocklist: listBadWords }),
+    maskProfanity: (input: string, placeholder = '*',): string => maskProfaneWord({ input, placeholder, blocklist: listBadWords }),
 
     // Method for cleaning a string.
     cleanString: (input: string): string => filterProfanity({ input, blocklist: listBadWords }),

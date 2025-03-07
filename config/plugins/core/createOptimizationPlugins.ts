@@ -18,6 +18,6 @@ export const createOptimizationPlugins = (): Plugin[] => {
       dependencies: true,
       // Don't bundle peer dependencies
       peerDependencies: true,
-    }),
+    }) as Plugin,
   ];
 };

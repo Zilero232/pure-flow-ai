@@ -23,39 +23,39 @@ const createConfig = async (options: BuildOptions): Promise<RollupOptions> => {
 
     // Output configuration.
     output: {
-      // Директория для выходных файлов
+      // Output directory for files.
       dir: `${paths.build}/${format}`,
 
-      // Формат выходных файлов
+      // Output files format.
       format: format === BUILD_FORMATS_ENUM.CJS ? 'commonjs' : 'es',
 
-      // Название файлов
+      // Output file names.
       entryFileNames: format === BUILD_FORMATS_ENUM.CJS  ? '[name].cjs' : '[name].js',
 
-      // Имя для экспорта по умолчанию
+      // Default export name.
       exports: 'named',
 
-      // Минификация кода в production
+      // Code minification in production.
       compact: !isDev,
       hoistTransitiveImports: true,
       esModule: true,
 
-      // Разработка
+      // Development options.
       sourcemap: isDev,
       validate: true,
 
-      // Генерация кода
+      // Code generation options.
       generatedCode: {
-        // Использует const вместо var
+        // Use const instead of var.
         constBindings: true,
 
-        // Использует стрелочные функции
+        // Use arrow functions.
         arrowFunctions: true,
 
-        // Использует сокращенную запись объектов
+        // Use object shorthand notation.
         objectShorthand: true,
 
-        // Отключает использование Symbol
+        // Disable Symbol usage.
         symbols: false,
       },
     },

@@ -8,7 +8,6 @@ describe('maskProfaneWord', () => {
     const result = maskProfaneWord({
       input: 'this is a bad word',
       blocklist: ['bad'],
-      placeholder: '*'
     });
 
     expect(result).toBe('this is a *** word');
@@ -19,7 +18,6 @@ describe('maskProfaneWord', () => {
     const result = maskProfaneWord({
       input: '',
       blocklist: ['bad'],
-      placeholder: '*'
     });
 
     expect(result).toBe('');
@@ -31,7 +29,6 @@ describe('maskProfaneWord', () => {
     const result = maskProfaneWord({
       input,
       blocklist: [],
-      placeholder: '*'
     });
 
     expect(result).toBe(input);
@@ -42,7 +39,6 @@ describe('maskProfaneWord', () => {
     const result = maskProfaneWord({
       input: undefined as unknown as string,
       blocklist: ['bad'],
-      placeholder: '*'
     });
 
     expect(result).toBe('');
@@ -54,7 +50,6 @@ describe('maskProfaneWord', () => {
     const result = maskProfaneWord({
       input,
       blocklist: undefined as unknown as string[],
-      placeholder: '*'
     });
 
     expect(result).toBe(input);
@@ -76,7 +71,6 @@ describe('maskProfaneWord', () => {
     const result = maskProfaneWord({
       input: 'bad text with another bad word',
       blocklist: ['bad'],
-      placeholder: '*'
     });
 
     expect(result).toBe('*** text with another *** word');
@@ -87,7 +81,6 @@ describe('maskProfaneWord', () => {
     const result = maskProfaneWord({
       input: 'bad and terrible text',
       blocklist: ['bad', 'terrible'],
-      placeholder: '*'
     });
 
     expect(result).toBe('*** and ******** text');
@@ -98,7 +91,6 @@ describe('maskProfaneWord', () => {
     const result = maskProfaneWord({
       input: 'BAD bad Bad bAd',
       blocklist: ['bad'],
-      placeholder: '*'
     });
 
     expect(result).toBe('*** *** *** ***');
@@ -109,7 +101,6 @@ describe('maskProfaneWord', () => {
     const result = maskProfaneWord({
       input: 'bad! (bad) bad, bad.',
       blocklist: ['bad'],
-      placeholder: '*'
     });
 
     expect(result).toBe('***! (***) ***, ***.');
@@ -131,7 +122,6 @@ describe('maskProfaneWord', () => {
     const result = maskProfaneWord({
       input: 'embarrassed',
       blocklist: ['ass'],
-      placeholder: '*'
     });
 
     expect(result).toBe('embarrassed');
@@ -142,7 +132,6 @@ describe('maskProfaneWord', () => {
     const result = maskProfaneWord({
       input: 'bad    word    bad',
       blocklist: ['bad'],
-      placeholder: '*'
     });
 
     expect(result).toBe('***    word    ***');
@@ -153,7 +142,6 @@ describe('maskProfaneWord', () => {
     const result = maskProfaneWord({
       input: 'bad\nword\nbad',
       blocklist: ['bad'],
-      placeholder: '*'
     });
 
     expect(result).toBe('***\nword\n***');

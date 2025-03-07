@@ -72,17 +72,19 @@
 		"lint:fix": "eslint . --fix",
 		"test": "vitest run -c ./vitest.config.ts",
 		"test:watch": "vitest watch -c ./vitest.config.ts",
-		"knip": "knip -c ./knip.json -t ./tsconfig.json"
+		"knip": "knip -c ./knip.json -t ./tsconfig.json",
+		"copy:types": "cpx 'src/types/**/*' build/types"
 	},
 	"publishConfig": {
 		"access": "public"
 	},
 	"devDependencies": {
-		"@rollup/plugin-commonjs": "^28.0.2",
+		"@rollup/plugin-commonjs": "^28.0.3",
 		"@rollup/plugin-node-resolve": "^16.0.0",
 		"@rollup/plugin-strip": "^3.0.4",
 		"@rollup/plugin-terser": "^0.4.4",
 		"@rollup/plugin-typescript": "^12.1.2",
+		"@types/cpx": "^1.5.5",
 		"@types/node": "^22.13.9",
 		"@types/rollup-plugin-auto-external": "^2.0.5",
 		"@types/rollup-plugin-progress": "^1.1.6",
@@ -91,6 +93,7 @@
 		"@zilero/vitest": "^1.2.1",
 		"commit-jazzer": "^1.1.5",
 		"commitizen": "^4.3.1",
+		"cpx": "^1.5.0",
 		"husky": "^9.1.7",
 		"knip": "^5.45.0",
 		"lint-staged": "^15.4.3",
@@ -98,7 +101,6 @@
 		"rollup": "^4.34.9",
 		"rollup-plugin-analyzer": "^4.0.0",
 		"rollup-plugin-auto-external": "^2.0.0",
-		"rollup-plugin-dts": "^6.1.1",
 		"rollup-plugin-filesize": "^10.0.0",
 		"rollup-plugin-progress": "^1.1.2",
 		"rollup-plugin-typescript-paths": "^1.5.0",

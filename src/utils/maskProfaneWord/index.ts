@@ -1,10 +1,9 @@
-import type { BadWordFilterOptions } from '../../types';
-
 import { createWordRegex } from '../../helpers';
 
-interface MaskProfaneWordProps extends Pick<BadWordFilterOptions, 'placeholder'> {
+interface MaskProfaneWordProps {
 	blocklist: string[];
 	input: string;
+  placeholder?: string;
 }
 
 /**
