@@ -1432,10 +1432,10 @@
   resolved "https://registry.npmjs.org/@vue/shared/-/shared-3.5.13.tgz"
   integrity sha512-/hnE/qP5ZoGpol0a5mDi45bOd7t3tjYJBjsgCsivow7D48cJeV5l05RD82lPqi7gRiphZM37rnhW1l6ZoCNNnQ==
 
-"@zilero/eslint@^1.2.1":
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/@zilero/eslint/-/eslint-1.2.1.tgz#776a1399060f95d0f2a6599df830f39cac3df222"
-  integrity sha512-S0EPJqvB1qtEOhG2boG7kEQZHq7Q0wRHVWwEn/1j+/UoK/HPWwblOHktPnirODANbEXEyTvJ5H5THVKZoQG08Q==
+"@zilero/eslint@^1.2.10":
+  version "1.2.10"
+  resolved "https://registry.npmjs.org/@zilero/eslint/-/eslint-1.2.10.tgz#9da96e06f1c05ec8e6ef9a228ffaaa6fa8e6b9bd"
+  integrity sha512-8nlKg+ymyC6SkrBYA6tRYA/GSJZFPRfBCgcsJ2MUn6GuJ514lmdSsGT4J1VGhzpyh3Kec6eF//Ftx74SPAZ8iA==
   dependencies:
     "@antfu/eslint-config" "4.6.0"
     "@eslint-react/eslint-plugin" "1.30.2"
@@ -1448,19 +1448,19 @@
     eslint-plugin-react-hooks "5.2.0"
     eslint-plugin-react-refresh "0.4.19"
 
-"@zilero/tsconfigs@^1.2.1":
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/@zilero/tsconfigs/-/tsconfigs-1.2.1.tgz#fdd3061a7e68d2603f2ada142172d360de498e1b"
-  integrity sha512-/6V3Zil1l2V0ntoww4GKSWraH39liH/cwkiKhqLAR2bDAIYGWCmXQsPIhsodmGlcRLPoU3mrvBfA8xzd+iyseA==
+"@zilero/tsconfigs@^1.2.10":
+  version "1.2.10"
+  resolved "https://registry.npmjs.org/@zilero/tsconfigs/-/tsconfigs-1.2.10.tgz#923fc3c301799dcb314c44d2432b1a138f0cccba"
+  integrity sha512-OdaQ6YEYwDHaaIVRL0yjCAm5GOWQ1n/em9MjaSx6ROtlpW8PfbLv6LHhMd5Br1kX9qwmwmmQlWfH8JrSBQaYrg==
   dependencies:
     "@types/node" "^22.13.9"
     "@types/react" "^19.0.10"
     "@types/react-dom" "^19.0.4"
 
-"@zilero/vitest@^1.2.1":
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/@zilero/vitest/-/vitest-1.2.1.tgz#74932fbab0906ad92047333aa27d23bd41922141"
-  integrity sha512-IywH3JluU7pCutKe2SeDVTyishWV/vTsCLeCRIexpCJ705sLkp/G7lwmvaiHtoHEqFLCkqOeQ89kTJ80ybeB2Q==
+"@zilero/vitest@^1.2.10":
+  version "1.2.10"
+  resolved "https://registry.npmjs.org/@zilero/vitest/-/vitest-1.2.10.tgz#f5f3b398952e0221943635826d4bc0e2602119d2"
+  integrity sha512-syxt/5mp8OjN+7ZLF4bCQS3s1qVl5HjCg9p8EEOfSUCnnDv/45iGahpXcOqEFbGx9zM84l3E6GIAvbvIdogfuw==
   dependencies:
     jsdom "^26.0.0"
     vitest "^3.0.7"
