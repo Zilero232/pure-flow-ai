@@ -1,7 +1,7 @@
 {
 	"name": "pure-flow-ai",
 	"type": "module",
-	"version": "1.0.0",
+	"version": "1.1.0",
 	"description": "🤖 Smart text analysis package for detecting positive and negative words with AI support. Features customizable word lists, multiple languages, and AI-powered sentiment analysis. Perfect for content moderation, sentiment analysis, and text filtering in any Node.js application.",
 	"author": {
 		"name": "Artemev Alexandr",
